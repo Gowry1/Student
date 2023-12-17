@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 70px;
+    }
+    
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+    
+    .section-bg {
+      background-image: url('1.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+	  
+	 .text-white {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="section bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h1>Welcome To SMS</h1>
+        <button class="btn btn-outline-primary" onclick="scrollToSection2()">Click here to begin</button>
+      </div>
+    </div>
+  </div>
+  
+	
+  <div class="section section-bg">
+    <div class="container">
+      <div class="text-center text-white">
+        <h2>Manage Students</h2>
+        <div class="btn-group-vertical">
+          <button class="btn btn-primary mb-2" onclick="redirectToPage('student-form.html')">Add Students</button>
+          <button class="btn btn-primary mb-2" onclick="redirectToPage('editanddelete.html')">Update Students</button>
+          <button class="btn btn-primary mb-2" onclick="redirectToPage('search.html')">Find Students</button>
+        </div>
+		  <h2>Manage Marks</h2>
+        <div class="btn-group-vertical">
+          <button class="btn btn-primary mb-2" onclick="redirectToPage('marks.html')">Update Marks</button>
+          <button class="btn btn-primary mb-2" onclick="redirectToPage('results.html')">Students Results</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function scrollToSection2() {
+      window.scrollTo({
+        top: document.querySelector('.section-bg').offsetTop,
+        behavior: 'smooth'
+      });
+    }
+    
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
